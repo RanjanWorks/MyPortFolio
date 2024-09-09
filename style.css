@@ -179,7 +179,7 @@ header {
       cursor: pointer;
     }
   }
-  background: url("/images/ranjansvg.svg") no-repeat;
+  background: url("./images/ranjansvg.svg") no-repeat;
   background-attachment: fixed;
   background-position: 90% 80%;
   background-size: 35%;
@@ -247,7 +247,7 @@ header {
     border-radius: 5px;
     justify-content: center;
     position: relative;
-    background: url(/images/ranjanme.png) no-repeat center;
+    background: url(./images/ranjanme.png) no-repeat center;
     background-size: 95%;
     background-color: var(--white);
 
