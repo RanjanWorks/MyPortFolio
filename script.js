@@ -45,20 +45,19 @@ function animateText() {
   helloInterval = setInterval(() => {
     if (helloIndex >= helloArray.length) {
       helloIndex = 0;
-      isLoded = true;
-      clearInterval(helloInterval); // Stop the animation after the first full cycle
-      removeLoader(); // Trigger the loader removal
+      clearInterval(helloInterval); 
+      setTimeout(()=>{
+      removeLoader(); 
+      },1000)
     }
     loaderText.innerHTML = helloArray[helloIndex];
     helloIndex++;
-  }, 150);
+  }, 200);
 }
 
 function removeLoader() {
   loader.classList.add("disappear");
   document.body.classList.remove("no-scroll");
-  // loader.classList.add("radius");
-
   AOS.init({
     duration: 1000,
     once: true,
@@ -66,19 +65,17 @@ function removeLoader() {
 }
 
 window.onload = () => {
-  if (document.readyState === "complete") {
-    animateText(); // Start the text animation after the page loads
-  }
+    animateText(); 
   document.documentElement.scrollTop = 0;
 };
 
-document.onreadystatechange = function () {
-  if (document.readyState !== "complete") {
-    loader.classList.add("loading"); // Keep loader visible if not loaded
-  } else {
-    animateText(); // Start the animation once the page is fully loaded
-  }
-};
+// document.onreadystatechange = function () {
+//   if (document.readyState !== "complete") {
+//     loader.classList.add("loading"); // Keep loader visible if not loaded
+//   } else {
+//     animateText(); // Start the animation once the page is fully loaded
+//   }
+// };
 
 
 gsap.registerPlugin(ScrollTrigger);
