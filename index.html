@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover the creative web development portfolio of Ranjan. From responsive designs to cutting-edge technologies, see how he brings websites to life.">
+    <meta name="keywords" content="webdeveloper frontend backend development portfolio">
+    <meta name="author" content="Ranjan Kashyap">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Portfolio">
+    <meta property="og:description" content="Creative web designer crafting innovative websites.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/thumbnail.png">
+    <meta property="og:site_name" content="Portfolio">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <title>Ranjan Kashyap</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"
+      integrity="sha512-Wh4+s2lPgPpBCBz8fdVpfOcEw3WJmNRxLefQZ9tlF6gH6iwf+LMZdJjB/qpSLWfk2WOgMqJmcmZDqDgihK5qCA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" /> 
+  </head>
+  <body class="no-scroll">
+
+    <div class="loader">
+      <h1 id="loader-text" class="loader-text"></h1>
+    </div>
+    <header style="top: 0;" id="navbar">
+        <img id="logo" src="images/rlogodark.svg" alt="" />
+      <nav>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">My Intro</a></li>
+        <li><a href="#offer">Services</a></li>
+        <li><a href="#skill">Skills</a></li>
+        <li><a id="contact-main" href="#contact">Contact</a></li>
+      </nav>
+      <div class="hamburger">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+      </div>
+    </header>
+
+    <div class="overlay-navbar">
+    <div class="overlay-wrapper">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">My Intro</a></li>
+      <li><a href="#offer">Services</a></li>
+      <li><a href="#skill">Skills</a></li>
+      <li><a id="contact-main" href="#contact">Contact</a></li>
+    </div>
+    </div>
+
+    <div data-aos="fade-up" id="main" class="hero-section">
+      <!-- <img class="text" src="/images/text.svg" alt="" /> -->
+      <div class="about-section">
+        <p class="blue-text">Hi, I am</p>
+        <h1 class="about-name linear-wipe">Ranjan Kashyap</h1>
+        <p class="about-tag">Passionate Full-Stack Developer</p>
+        <p class="about-text">
+          Aspiring web developer skilled in HTML, CSS, and JavaScript, now
+          exploring Node.js and Express. Eager to learn, collaborate, and stay
+          updated with web trends.
+        </p>
+        <div class="buttons">
+          <button onclick="downloadCv()" class="btn-cv">Download CV</button>
+          <button
+            onclick="document.getElementById('contact-main').click()"
+            class="btn-contact"
+          >
+            Contact Me
+          </button>
+        </div>
+      </div>
+      <!-- <div class="image-section">
+        <img src="/images/kk.png" alt="">
+      </div> -->
+      <div class="achievement-part">
+        <div class="wrapper-achieve">
+          <div class="icon">
+            <i class="bx bxs-medal"></i>
+          </div>
+          <div class="content-achieve">
+            <p class="achieve-tag">1 Year job</p>
+            <p class="achieve-text">Experience</p>
+          </div>
+        </div>
+        <div class="wrapper-achieve">
+          <div class="icon">
+            <i class="bx bx-file"></i>
+          </div>
+          <div class="content-achieve">
+            <p class="achieve-tag">50+ Projects</p>
+            <p class="achieve-text">Completed</p>
+          </div>
+        </div>
+        <div style="border: none" class="wrapper-achieve">
+          <div class="icon">
+            <i class="bx bx-support"></i>
+          </div>
+          <div class="content-achieve">
+            <p class="achieve-tag">Support</p>
+            <p class="achieve-text">Online 24/7</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="about-segment">
+      <div id="about-scroller" class="scroll2">
+        <h1>RANJAN KASHYHAP</h1>
+      </div>
+      <div class="about-img-container box gradient-shadow">
+        <!-- <img src="/images/ranjanme.png" alt="" /> -->
+      </div>
+      <div class="about-main box">
+        <p class="blue-text">My Intro</p>
+        <h1 class="heading">About Me</h1>
+        <p data-about-text>
+          Aspiring web developer with a passion for coding and creating dynamic
+          web applications. Proficient in HTML, CSS, and JavaScript. Currently
+          learning back-end technologies like Node.js and Express. Dedicated to
+          constantly improving my skills and staying up-to-date with the latest
+          web development trends. Seeking opportunities to gain experience and
+          collaborate on exciting projects.
+        </p>
+        <div class="contact-details">
+          <div class="wrapper-about">
+            <div class="first">
+              <i class="bx bx-user"></i>
+              <p>Name</p>
+            </div>
+            <p>Ranjan Kashyap</p>
+          </div>
+          <div class="wrapper-about">
+            <div class="first">
+              <i class="bx bx-phone"></i>
+              <p>Phone</p>
+            </div>
+            <p>+916266245085</p>
+          </div>
+          <div class="wrapper-about">
+            <div class="first">
+              <i class="bx bx-envelope"></i>
+              <p>Email</p>
+            </div>
+            <p>kashyapranjan9977@gmail.com</p>
+          </div>
+        </div>
+        <div class="about-intrest">
+          <h1 class="heading">My Interests</h1>
+          <div class="interest">
+            <div class="interest-wrapper">
+              <i class="bx bxs-music"></i>
+              <p>Music</p>
+            </div>
+            <div class="interest-wrapper">
+              <i class="bx bx-run"></i>
+              <p>Running</p>
+            </div>
+            <div class="interest-wrapper">
+              <i class="bx bx-code-alt"></i>
+              <p>Programming</p>
+            </div>
+            <div class="interest-wrapper">
+              <i class="bx bx-camera"></i>
+              <p>Photography</p>
+            </div>
+            <div class="interest-wrapper">
+              <i class="bx bx-camera-movie"></i>
+              <p>Movie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <div id="skill" class="skill-segment">
+      <p data-aos="fade-up" class="blue-text">Why Choose Me</p>
+      <h1 class="heading" data-aos="fade-up">Core Competencies</h1>
+      <div data-aos="fade-up" data-aos-delay="400" class="skills-container">
+        <div class="progress-container html">
+          <div class="progress-circle html1">
+            <span class="progress-text">100%</span>
+          </div>
+          <p>HTML</p>
+          <p>
+            Skilled in creating clean, responsive HTML layouts with a focus on
+            semantic markup and accessibility.
+          </p>
+        </div>
+        <div class="progress-container css">
+          <div class="progress-circle css1">
+            <span class="progress-text">95%</span>
+          </div>
+          <p>CSS</p>
+          <p>
+            Experienced in crafting responsive, visually appealing designs with
+            modern CSS techniques.
+          </p>
+        </div>
+        <div class="progress-container javascript">
+          <div class="progress-circle javascript1">
+            <span class="progress-text">90%</span>
+          </div>
+          <p>JAVASCRIPT</p>
+          <p>
+            Proficient in JavaScript for building dynamic, interactive web
+            experiences
+          </p>
+        </div>
+        <div class="progress-container mongoose">
+          <div class="progress-circle mongoose1">
+            <span class="progress-text">70%</span>
+          </div>
+          <p>MONGOOSE</p>
+          <p>
+            Skilled in using Mongoose for efficient database modeling and data
+            management.
+          </p>
+        </div>
+        <div class="progress-container nextjs">
+          <div class="progress-circle nextjs1">
+            <span class="progress-text">60%</span>
+          </div>
+          <p>NEXT.JS</p>
+          <p>
+            Experienced in building server-rendered React applications with
+            Next.js for improved performance.
+          </p>
+        </div>
+        <div class="progress-container react">
+          <div class="progress-circle react1">
+            <span class="progress-text">50%</span>
+          </div>
+          <p>REACT.JS</p>
+          <p>
+            Proficient in developing dynamic, component-based UIs using React.js
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="curve-effect">
+      <div class="rounded-div-wrapper">
+        <div class="rounded-div"></div>
+      </div>
+      </div>
+
+    <div id="offer" class="offer-segment">
+      <p data-aos="fade-up" class="blue-text">Specialized In</p>
+      <h1 class="heading" data-aos="fade-up">What I Offer</h1>
+      <div data-aos="fade-up" data-aos-delay="400" class="offer-grid">
+        <div class="offer-container offer1">
+          <div class="offer-box">
+            <div class="offer-icon">
+              <i class="material-symbols-outlined">search_insights</i>
+            </div>
+            <h3>SEO</h3>
+            <p>
+              Expert SEO services tailored to your business goals. Increase
+              conversions and build brand authority.
+            </p>
+          </div>
+        </div>
+        <div class="offer-container offer2">
+          <div class="offer-box">
+            <div class="offer-icon">
+              <i class="bx bx-credit-card-front"></i>
+            </div>
+            <h3>Frontend Development</h3>
+            <p>
+              Deliver exceptional user experiences through clean, responsive,
+              and optimized frontend code.
+            </p>
+          </div>
+        </div>
+        <div class="offer-container offer3">
+          <div class="offer-box">
+            <div class="offer-icon">
+              <i class="material-symbols-outlined">database</i>
+            </div>
+            <h3>Backend Development</h3>
+            <p>
+              Optimize performance, security, and maintainability with efficient
+              backend development.
+            </p>
+          </div>
+        </div>
+        <div class="offer-container offer4">
+          <div class="offer-box">
+            <div class="offer-icon">
+              <i class="bx bxl-sketch"></i>
+            </div>
+            <h3>Web Design</h3>
+            <p>
+              Design websites that align with your brand identity and drive
+              conversions.
+            </p>
+          </div>
+        </div>
+        <div class="offer-container offer4">
+          <div class="offer-box">
+            <div class="offer-icon">
+              <i class="material-symbols-outlined">responsive_layout</i>
+            </div>
+            <h3>Responsiveness</h3>
+            <p>
+              Ensure your website looks and functions flawlessly on all devices,
+              from smartphones to desktops.
+            </p>
+          </div>
+        </div>
+        <div class="offer-container offer4">
+          <div class="offer-box">
+            <div class="offer-icon">
+              <i class="material-symbols-outlined">stacks</i>
+            </div>
+            <h3>UI/UX</h3>
+            <p>
+              Optimize the user experience through thoughtful design and
+              usability testing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="contact-segment">
+      <p data-aos="fade-up" class="blue-text">Ready to collaborate</p>
+      <h1 class="heading" data-aos="fade-up">Start a conversation</h1>
+      <div data-aos="fade-up" data-aos-delay="100" class="contact-wrapper">
+        <div class="contact-image">
+          <img src="/images/contact.svg" alt="" />
+        </div>
+        <form
+          data-aos="fade-up"
+          data-aos-delay="200"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact-form"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="333e8a61-9e20-4cad-a423-2c6772640b62"
+          />
+          <div class="contact-form-wrapper">
+            <label for="name"> <i class="bx bx-user"></i> Name</label>
+            <input name="Name" id="name" type="text" required />
+          </div>
+          <div class="contact-form-wrapper">
+            <label for="email"> <i class="bx bx-envelope"></i> Email</label>
+            <input name="Email" id="email" type="email" required />
+          </div>
+          <div class="contact-form-wrapper">
+            <label for="message">
+              <i class="bx bx-message-square"></i> Message
+            </label>
+            <textarea name="Message" required id="message"></textarea>
+          </div>
+          <div class="contact-form-wrapper">
+            <button type="submit">
+              <i class="bx bxl-telegram" style="color: #ffffff"></i>
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="social-icons">
+        <li class="hint--top hint--rounded" aria-label="Facebook" id="facebook">
+          <a target="_blank" href="https://www.facebook.com/ishere.ranjan"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+        </li>
+        <li class="hint--top hint--rounded" aria-label="X" id="twitter">
+          <a target="_blank" href="https://x.com/ishere_ranjan"
+            ><i class="bx bxl-twitter"></i
+          ></a>
+        </li>
+        <li class="hint--top hint--rounded" aria-label="Linkedin" id="linkedin">
+          <a target="_blank" href="https://www.linkedin.com/in/ishere-ranjan"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+        </li>
+        <li
+          class="hint--top hint--rounded"
+          aria-label="Instagram"
+          id="instagram"
+        >
+          <a target="_blank" href="https://www.instagram.com/ishere_ranjan"
+            ><i class="bx bxl-instagram-alt"></i
+          ></a>
+        </li>
+        <li class="hint--top hint--rounded" aria-label="Github" id="github">
+          <a target="_blank" href="https://github.com/RanjanWorks"
+            ><i class="bx bxl-github"></i
+          ></a>
+        </li>
+      </div>
+      <nav>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">My Intro</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </nav>
+      <p class="footer-text">
+        Ranjan Kashyap
+        <i class="bx bx-copyright"></i>
+        <span id="year">2024</span>
+      </p>
+    </footer>
+
+    <!-- <script> (function(a, b, c, d, e, f, g) { c[d] = c[d] || function() { (c[d].q = c[d].q || []).push(arguments); }; c['_lsAlias'] = c[d]; e = a.createElement(b); e.type = 'text/javascript'; e.async = true; e.src = 'https://app.chatsupport.co/api/client/get/script/LS-a144d7df'; f = function() { g = a.getElementsByTagName(b)[0]; g.parentNode.insertBefore(e, g); }; c.addEventListener('load', f); })(document, 'script', window, '_ls'); _ls('init', { 'projectId': 'LS-a144d7df' }); </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  
+  </body>
+</html>
