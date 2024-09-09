@@ -35,25 +35,6 @@ This portfolio is designed to display my skills and projects in web development.
 - **GSAP (GreenSock Animation Platform)**: Used for smooth scroll animations.
 - **GitHub Pages**: Hosting the website.
 
-## Installation
-
-To run this project locally, follow these steps:
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/RanjanWorks/MyPortFolio.git
-    ```
-
-2. Navigate to the project directory:
-    ```bash
-    cd MyPortFolio
-    ```
-
-3. Open the `index.html` file in your browser:
-    ```bash
-    open index.html
-    ```
-
 ## Usage
 
 This portfolio is a fully responsive, static website. You can navigate through sections like "Home," "About Me," "Projects," "Skills," and "Contact." Each section is designed to highlight different aspects of my web development experience.
@@ -64,32 +45,12 @@ Contributions are welcome! If you have suggestions for new features, improvement
 
 To contribute:
 
-1. Fork the repository.
-2. Create a new branch:
-    ```bash
-    git checkout -b feature-branch
-    ```
-3. Make your changes.
-4. Commit the changes:
-    ```bash
-    git commit -m "Added a new feature"
-    ```
-5. Push to the branch:
-    ```bash
-    git push origin feature-branch
-    ```
-6. Open a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
 If you have any questions, feel free to contact me at:
 
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/your-profile)
+- Email: kashyapranjan9977@gmail.com
 - GitHub: [RanjanWorks](https://github.com/RanjanWorks)
 
 ---
