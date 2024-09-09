@@ -2,7 +2,7 @@
 
 Welcome to **MyPortfolio**, a personal portfolio website built to showcase my projects, skills, and experiences. This project is hosted on GitHub Pages and built with HTML, CSS, JavaScript, and other modern web development technologies.
 
-![Portfolio Screenshot](https://i.ibb.co/nLBtxCH/thumbnailnew.png)
+![Portfolio Screenshot](https://github.com/RanjanWorks/MyPortFolio/blob/main/assets/previewlow.png?raw=true)
 
 ## Table of Contents
 - [About](#about)
