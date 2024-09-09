@@ -135,13 +135,13 @@ if(state){
   tl3.reverse()
   state = false
   setTimeout(()=>{
-  logo.src = "/images/rlogodark.svg"
+  logo.src = "./images/rlogodark.svg"
 
   },1400)
 }else{
   hamburger.classList.add('active')
   tl3.play()
-  logo.src = "/images/rlogowhite.svg"
+  logo.src = "./images/rlogowhite.svg"
   state = true
 
 }
@@ -153,7 +153,7 @@ document.querySelectorAll('.overlay-wrapper li').forEach(li=>{
     hamburger.classList.remove('active')
     tl3.reverse()
     state = false
-    logo.src = "/images/rlogodark.svg"
+    logo.src = "./images/rlogodark.svg"
   
 
   })
@@ -161,7 +161,7 @@ document.querySelectorAll('.overlay-wrapper li').forEach(li=>{
 
 function downloadCv() {
   let a = document.createElement('a');
-  a.href = '/images/cv.png'; // Path to your CV file
+  a.href = './images/cv.png'; // Path to your CV file
   a.download = 'ranjancv.png'; // Name and extension of the file to be downloaded
   document.body.append(a);
   a.click();
