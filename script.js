@@ -35,7 +35,7 @@ let helloArray = [
   "Hallo ",
   "Ciao ",
   "Hola",
-  "जोहार हो",
+  "nǐ hǎo",
 ];
 let helloIndex = 0;
 let isLoded = false;
@@ -69,25 +69,17 @@ window.onload = () => {
   document.documentElement.scrollTop = 0;
 };
 
-// document.onreadystatechange = function () {
-//   if (document.readyState !== "complete") {
-//     loader.classList.add("loading"); // Keep loader visible if not loaded
-//   } else {
-//     animateText(); // Start the animation once the page is fully loaded
-//   }
-// };
-
 
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.matchMedia({
-  // Desktop and tablet screens (width greater than 768px)
   "(min-width: 769px)": function () {
     gsap.to(".scroll2", {
       x: "-200%",
       scrollTrigger: {
         trigger: ".scroll2",
         scrub: 5,
+        duration: 2,
         start: "0% 50%",
       },
     });
@@ -118,7 +110,10 @@ tl3.to(".overlay-navbar",{
 
 tl3.from(".overlay-navbar li",{
   y: 15,
-  stagger: .2,
+  stagger: {
+    amount: 0.4,
+  },
+  ease: "power2.inOut",
   opacity: 0,
 })
 
@@ -158,8 +153,8 @@ document.querySelectorAll('.overlay-wrapper li').forEach(li=>{
 
 function downloadCv() {
   let a = document.createElement('a');
-  a.href = './images/cv.png'; // Path to your CV file
-  a.download = 'ranjancv.png'; // Name and extension of the file to be downloaded
+  a.href = './images/cv.pdf'; 
+  a.download = 'ranjancv.pdf'; 
   document.body.append(a);
   a.click();
   a.remove();

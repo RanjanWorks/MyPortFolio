@@ -625,7 +625,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   .social-icons {
     display: flex;
     align-items: center;
@@ -799,6 +799,13 @@ footer {
       }
     }
   }
+}
+button {
+  transition: all 0.3s;
+}
+button:hover {
+  transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  transform: scale(1.05);
 }
 @keyframes shine {
   to {
