@@ -47,7 +47,6 @@
 
   </head>
   <body class="no-scroll">
- <div class="cursor"></div>
     <div class="loader">
       <h1 id="loader-text" class="loader-text"></h1>
     </div>
@@ -385,7 +384,7 @@
             <textarea name="Message" required id="message"></textarea>
           </div>
           <div class="contact-form-wrapper">
-            <button type="submit">
+            <button id="submitBtn" type="submit">
               <i class="bx bxl-telegram" style="color: #ffffff"></i>
               Send
             </button>
@@ -443,7 +442,47 @@
         <span id="year">2024</span>
       </p>
     </footer>
-
+    <svg style="display: none">
+      <symbol id="icon.spinner">
+        <g>
+          <circle
+            cx="12"
+            cy="12"
+            r="9.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+          >
+            <animate
+              attributeName="stroke-dasharray"
+              dur="1.5s"
+              calcMode="spline"
+              values="0 150;42 150;42 150;42 150"
+              keyTimes="0;0.475;0.95;1"
+              keySplines="0.42,0,0.58,1;0.42,0,0.58,1;0.42,0,0.58,1"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="stroke-dashoffset"
+              dur="1.5s"
+              calcMode="spline"
+              values="0;-16;-59;-59"
+              keyTimes="0;0.475;0.95;1"
+              keySplines="0.42,0,0.58,1;0.42,0,0.58,1;0.42,0,0.58,1"
+              repeatCount="indefinite"
+            />
+          </circle>
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            dur="2s"
+            values="0 12 12;360 12 12"
+            repeatCount="indefinite"
+          />
+        </g>
+      </symbol>
+    </svg>
     <script> (function(a, b, c, d, e, f, g) { c[d] = c[d] || function() { (c[d].q = c[d].q || []).push(arguments); }; c['_lsAlias'] = c[d]; e = a.createElement(b); e.type = 'text/javascript'; e.async = true; e.src = 'https://app.chatsupport.co/api/client/get/script/LS-a144d7df'; f = function() { g = a.getElementsByTagName(b)[0]; g.parentNode.insertBefore(e, g); }; c.addEventListener('load', f); })(document, 'script', window, '_ls'); _ls('init', { 'projectId': 'LS-a144d7df' }); </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

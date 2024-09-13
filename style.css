@@ -51,6 +51,7 @@ header {
         var(--primaryBlue) 50%,
         #000 50%
       );
+      font-weight: 500;
       background-size: 200% 100%;
       background-position: -100%;
       display: inline-block;
@@ -802,7 +803,7 @@ button {
 }
 button:hover {
   transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-  transform: scale(1.05);
+  outline: 1px solid var(--primaryBlue);
 }
 @keyframes shine {
   to {
@@ -938,8 +939,5 @@ button:hover {
   }
   .hamburger {
     display: flex;
-  }
-  .cursor {
-    display: none;
   }
 }

@@ -6,9 +6,13 @@ let loaderText = document.getElementById("loader-text");
 let hamburger = document.querySelector(".hamburger");
 let currentYear = new Date().getFullYear();
 let logo = document.getElementById("logo");
+let submitBtn = document.getElementById("submitBtn");
+let form = document.querySelector("form");
 footerYear.innerText = currentYear;
 
 let prevScrollpos = window.pageYOffset;
+const spinner =
+  '<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><use href="#icon.spinner"></use></svg>';
 
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
@@ -77,9 +81,9 @@ ScrollTrigger.matchMedia({
       x: "-200%",
       scrollTrigger: {
         trigger: ".scroll2",
-        scrub: 5,
-        duration: 3,
+        scrub: 1,
         start: "0% 50%",
+
       },
     });
 
@@ -116,7 +120,8 @@ tl3.from(".overlay-navbar li", {
 
 tl3.pause();
 
-if (window.innerWidth > 768) { // Adjust the width as needed
+if (window.innerWidth > 768) {
+  // Adjust the width as needed
   VanillaTilt.init(document.querySelectorAll(".progress-container"), {
     max: 15,
     speed: 3000,
@@ -130,6 +135,13 @@ if (window.innerWidth > 768) { // Adjust the width as needed
   });
 }
 
+form.addEventListener("submit", () => {
+  submitBtn.innerHTML = `${spinner}`;
+  const elements = document.querySelectorAll("#message, #email,#name");
+  elements.forEach((element) => {
+    element.value = "";
+  });
+});
 
 let state = false;
 hamburger.addEventListener("click", () => {
