@@ -3,9 +3,9 @@ let navBar = document.getElementById("navbar");
 let loader = document.querySelector(".loader");
 let main = document.getElementById("main");
 let loaderText = document.getElementById("loader-text");
-let hamburger = document.querySelector('.hamburger')
+let hamburger = document.querySelector(".hamburger");
 let currentYear = new Date().getFullYear();
-let logo = document.getElementById('logo')
+let logo = document.getElementById("logo");
 footerYear.innerText = currentYear;
 
 let prevScrollpos = window.pageYOffset;
@@ -45,10 +45,10 @@ function animateText() {
   helloInterval = setInterval(() => {
     if (helloIndex >= helloArray.length) {
       helloIndex = 0;
-      clearInterval(helloInterval); 
-      setTimeout(()=>{
-      removeLoader(); 
-      },1000)
+      clearInterval(helloInterval);
+      setTimeout(() => {
+        removeLoader();
+      }, 1000);
     }
     loaderText.innerHTML = helloArray[helloIndex];
     helloIndex++;
@@ -65,10 +65,9 @@ function removeLoader() {
 }
 
 window.onload = () => {
-    animateText(); 
+  animateText();
   document.documentElement.scrollTop = 0;
 };
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,7 +78,7 @@ ScrollTrigger.matchMedia({
       scrollTrigger: {
         trigger: ".scroll2",
         scrub: 5,
-        duration: 2,
+        duration: 3,
         start: "0% 50%",
       },
     });
@@ -100,61 +99,90 @@ ScrollTrigger.matchMedia({
   },
 });
 
+let tl3 = gsap.timeline();
+tl3.to(".overlay-navbar", {
+  y: 0,
+  duration: 0.3,
+});
 
-let tl3 = gsap.timeline()
-tl3.to(".overlay-navbar",{
-  y:0,
-  duration: .3,
-
-})
-
-tl3.from(".overlay-navbar li",{
+tl3.from(".overlay-navbar li", {
   y: 15,
   stagger: {
     amount: 0.4,
   },
   ease: "power2.inOut",
   opacity: 0,
-})
+});
 
-tl3.pause()
+tl3.pause();
 
 
-let state = false
-hamburger.addEventListener('click',()=>{
-if(state){
-  hamburger.classList.remove('active')
-  tl3.reverse()
-  state = false
-  setTimeout(()=>{
-  logo.src = "./images/rlogodark.svg"
 
-  },1400)
-}else{
-  hamburger.classList.add('active')
-  tl3.play()
-  logo.src = "./images/rlogowhite.svg"
-  state = true
 
-}
+document.body.addEventListener("mouseleave", () => {
+  document.querySelector(".cursor").style.display = "none";
+});
 
-})
+document.body.addEventListener("mouseenter", () => {
+  document.querySelector(".cursor").style.display = "block";
+});
 
-document.querySelectorAll('.overlay-wrapper li').forEach(li=>{
-  li.addEventListener('click',()=>{
-    hamburger.classList.remove('active')
-    tl3.reverse()
-    state = false
-    logo.src = "./images/rlogodark.svg"
-  
+document.body.addEventListener("mousemove", function (dets) {
+  gsap.to(".cursor", {
+    x: dets.clientX,
+    y: dets.clientY,
+    duration: 0.2,
+    ease: "elastic.out(1,0.3)",
+  });
+});
 
-  })
-})
+
+
+
+VanillaTilt.init(document.querySelectorAll(".progress-container"), {
+  max: 15,
+  speed: 3000,
+  glare: true,
+});
+VanillaTilt.init(document.querySelectorAll(".offer-container"), {
+  max: 15,
+  speed: 3000,
+  reverse: true,
+});
+
+
+
+
+let state = false;
+hamburger.addEventListener("click", () => {
+  if (state) {
+    hamburger.classList.remove("active");
+    tl3.reverse();
+    state = false;
+    setTimeout(() => {
+      // logo.src = "./images/rlogodark.svg"
+    }, 1400);
+  } else {
+    hamburger.classList.add("active");
+    tl3.play();
+    // logo.src = "./images/rlogowhite.svg"
+    state = true;
+  }
+});
+
+document.querySelectorAll(".overlay-wrapper li").forEach((li) => {
+  li.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    tl3.reverse();
+    state = false;
+    // logo.src = "./images/rlogodark.svg";
+  });
+});
 
 function downloadCv() {
-  let a = document.createElement('a');
-  a.href = './images/cv.pdf'; 
-  a.download = 'ranjancv.pdf'; 
+  let a = document.createElement("a");
+  a.href = "./images/cv.pdf";
+  a.download = "ranjancv.pdf";
   document.body.append(a);
   a.click();
   a.remove();

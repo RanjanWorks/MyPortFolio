@@ -7,6 +7,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-size: inherit;
+  cursor: none !important;
 
   /* outline: 1px solid red; */
   /* transition: 0.5s; */
@@ -510,7 +511,7 @@ header {
   }
 }
 
-.offer-box:hover {
+/* .offer-box:hover {
   transition: 0.3s ease;
 
   background-color: var(--primaryBlue);
@@ -526,7 +527,7 @@ header {
   p {
     color: var(--white);
   }
-}
+} */
 
 .contact-segment {
   height: 100vh;
@@ -612,15 +613,23 @@ header {
   }
 }
 
+.cursor{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #bababaa0;
+  position: fixed;
+  z-index: 999999999;
+  display: none;
+
+}
+
+
 footer {
   position: sticky;
   top: 100%;
   height: 40vh;
-  background-color: var(--white);
-  background: url("images/fade.webp");
-  background-attachment: fixed;
-
-  background-size: cover;
+  background-color: #1B1B1B;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -654,7 +663,7 @@ footer {
       a {
         text-decoration: none;
         color: var(--white);
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
   }
@@ -765,9 +774,9 @@ footer {
 .hamburger.active .line.line1 {
   transform: rotate(45deg) translate(4px, 4px);
 }
-.hamburger.active .line {
+/* .hamburger.active .line {
   background-color: white;
-}
+} */
 
 .hamburger.active .line.line2 {
   transform: rotate(-45deg) translate(4px, -4px);
@@ -780,8 +789,9 @@ footer {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(310.16deg, #272130 18.64%, #16222e 82.88%),
-    linear-gradient(0deg, #fff, #fff);
+  /* background: linear-gradient(310.16deg, #272130 18.64%, #16222e 82.88%),
+    linear-gradient(0deg, #fff, #fff); */
+    background-color: var(--white);
   z-index: 999;
   display: flex;
   align-items: center;
@@ -793,7 +803,7 @@ footer {
       list-style: none;
       a {
         text-decoration: none;
-        color: #ffffff;
+        color: black;
         font-weight: 500;
         font-size: 2rem;
       }
@@ -941,5 +951,8 @@ button:hover {
   }
   .hamburger {
     display: flex;
+  }
+  .cursor{
+    display: none;
   }
 }
