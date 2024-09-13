@@ -116,16 +116,20 @@ tl3.from(".overlay-navbar li", {
 
 tl3.pause();
 
-VanillaTilt.init(document.querySelectorAll(".progress-container"), {
-  max: 15,
-  speed: 3000,
-  glare: true,
-});
-VanillaTilt.init(document.querySelectorAll(".offer-container"), {
-  max: 15,
-  speed: 3000,
-  reverse: true,
-});
+if (window.innerWidth > 768) { // Adjust the width as needed
+  VanillaTilt.init(document.querySelectorAll(".progress-container"), {
+    max: 15,
+    speed: 3000,
+    glare: true,
+  });
+
+  VanillaTilt.init(document.querySelectorAll(".offer-container"), {
+    max: 15,
+    speed: 3000,
+    reverse: true,
+  });
+}
+
 
 let state = false;
 hamburger.addEventListener("click", () => {
