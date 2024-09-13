@@ -52,7 +52,7 @@ function animateText() {
     }
     loaderText.innerHTML = helloArray[helloIndex];
     helloIndex++;
-  }, 200);
+  }, 100);
 }
 
 function removeLoader() {
@@ -116,29 +116,6 @@ tl3.from(".overlay-navbar li", {
 
 tl3.pause();
 
-
-
-
-document.body.addEventListener("mouseleave", () => {
-  document.querySelector(".cursor").style.display = "none";
-});
-
-document.body.addEventListener("mouseenter", () => {
-  document.querySelector(".cursor").style.display = "block";
-});
-
-document.body.addEventListener("mousemove", function (dets) {
-  gsap.to(".cursor", {
-    x: dets.clientX,
-    y: dets.clientY,
-    duration: 0.2,
-    ease: "elastic.out(1,0.3)",
-  });
-});
-
-
-
-
 VanillaTilt.init(document.querySelectorAll(".progress-container"), {
   max: 15,
   speed: 3000,
@@ -149,9 +126,6 @@ VanillaTilt.init(document.querySelectorAll(".offer-container"), {
   speed: 3000,
   reverse: true,
 });
-
-
-
 
 let state = false;
 hamburger.addEventListener("click", () => {
